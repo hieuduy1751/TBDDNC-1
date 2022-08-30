@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task1</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    const aLabel = document.createElement('p');
+    aLabel.innerText = 'Nhap a:';
+    const bLabel = document.createElement('p');
+    bLabel.innerText = 'Nhap b:';
+    const tongBtn = document.createElement('button');
+    tongBtn.innerText = 'Tinh tong';
+    tongBtn.setAttribute('style', 'display: block; margin: 5px 0')
+    tongBtn.addEventListener('click', () => {
+      cValue.setAttribute('value', parseInt(aInput.value) + parseInt(bInput.value));
+    })
+    const aInput = document.createElement('input');
+    aInput.setAttribute('type', 'number');
+    const bInput = document.createElement('input');
+    bInput.setAttribute('type', 'number');
+    const cValue = document.createElement('input');
+    cValue.setAttribute('disabled', true)
+
+    root.appendChild(aLabel);
+    root.appendChild(aInput);
+    root.appendChild(bLabel);
+    root.appendChild(bInput);
+    root.appendChild(tongBtn);
+    root.appendChild(cValue);
+  </script>
+</body>
+</html>
